@@ -21,7 +21,7 @@ pyfirmata의 아두이노 모듈을 사용하기 위해 import함
   -> 0번핀을 analog신호 입력핀으로 설정\
 
  ```led = board.get_pin('d:9:s') ```\
-  -> 9번 핀을 digital신호 신호핀으로 설정\
+  -> 9번 핀을 digital신호 신호핀으로 설정
   신호핀으로 설정하면 sevor motor에 신호를 주는 핀으로 설정됨
   
 ``` it = util.Iterator(board) ```\
