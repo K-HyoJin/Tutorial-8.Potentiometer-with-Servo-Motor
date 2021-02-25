@@ -18,10 +18,10 @@ pyfirmata의 아두이노 모듈을 사용하기 위해 import함
 변수1 = Arduino('**포트번호**') 를 해서 보드와 연결 
 
 ``` analog_input = board.get_pin('a:0:i')``` \
-  -> 0번핀을 analog신호 입력핀으로 설정\
+  -> 0번핀을 analog신호 입력핀으로 설정
 
  ```led = board.get_pin('d:9:s') ```\
-  -> 9번 핀을 digital신호 신호핀으로 설정
+  -> 9번 핀을 digital신호 신호핀으로 설정\
   신호핀으로 설정하면 sevor motor에 신호를 주는 핀으로 설정됨
   
 ``` it = util.Iterator(board) ```\
@@ -47,8 +47,8 @@ Potentiometer와 연결된 0번핀의 입력을 읽어와서 변수 analog_value
    if analog_value is None:
       time.sleep(0.1)
       break
-```      
-
+```    
+입력으로 들어온 analog_value 값이 None이 아니면 0.1초동안 지연시키고 for문을 빠져나감
 
 ```      
    if analog_value < 0.5:
@@ -61,7 +61,9 @@ Potentiometer와 연결된 0번핀의 입력을 읽어와서 변수 analog_value
       move_servo(170)
       move_servo(0)
 ```
-
+analogd_value값이 0.5보다 작으면 servo motor의 각도가 30도 → 0도로 변화
+0.5보다 크고 0.7보다 작으면 servo motor의 각도가 100도 → 0도로 변화
+0.7보다 크면 servo motor의 각도가 170도 → 0도로 변화
 
 
 
