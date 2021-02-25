@@ -33,10 +33,10 @@ iterator 시작
  ```
 def move_servo(v):
   servo.write(v)
-  board.pass_time(DELAY)
+  board.pass_time(1)
 ```
 모터를 움직이게 하는 함수 작성\
-원하는 각도를 입력으로 주고 DELAY변수만큼 지연시킴
+원하는 각도를 입력으로 주고 1초만큼 지연시킴
   
 
 ``` analog_value = analog_input.read() ```\
