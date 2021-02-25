@@ -61,8 +61,8 @@ Potentiometer와 연결된 0번핀의 입력을 읽어와서 변수 analog_value
       move_servo(170)
       move_servo(0)
 ```
-analogd_value값이 0.5보다 작으면 servo motor의 각도가 30도 → 0도로 변화
-0.5보다 크고 0.7보다 작으면 servo motor의 각도가 100도 → 0도로 변화
+analogd_value값이 0.5보다 작으면 servo motor의 각도가 30도 → 0도로 변화\
+0.5보다 크고 0.7보다 작으면 servo motor의 각도가 100도 → 0도로 변화\
 0.7보다 크면 servo motor의 각도가 170도 → 0도로 변화
 
 
