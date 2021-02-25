@@ -24,6 +24,12 @@ pyfirmata의 아두이노 모듈을 사용하기 위해 import함
   -> 9번 핀을 digital신호 신호핀으로 설정\
   신호핀으로 설정하면 sevor motor에 신호를 주는 핀으로 설정됨
   
+``` it = util.Iterator(board) ```\
+보드의 입력값을 지속적으로 업데이트해주는 iterator 변수 선언
+
+ ``` it.start()``` \
+iterator 시작
+
  ```
 def move_servo(v):
   servo.write(v)
@@ -32,3 +38,30 @@ def move_servo(v):
 모터를 움직이게 하는 함수 작성\
 원하는 각도를 입력으로 주고 DELAY변수만큼 지연시킴
   
+
+``` analog_value = analog_input.read() ```\
+Potentiometer와 연결된 0번핀의 입력을 읽어와서 변수 analog_value에 저장
+
+```
+ for i in range(1):
+   if analog_value is None:
+      time.sleep(0.1)
+      break
+```      
+
+
+```      
+   if analog_value < 0.5:
+      move_servo(30)
+      move_servo(0)
+   if (analog_value > 0.5 and analog_value < 0.7):
+      move_servo(100)
+      move_servo(0)
+   if analog_value > 0.7:
+      move_servo(170)
+      move_servo(0)
+```
+
+
+
+
